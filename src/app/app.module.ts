@@ -3,7 +3,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {NgModule} from '@angular/core';
-import {CdkTableModule, DataSource} from '@angular/cdk';
 import {
 	MdButtonModule,
 	MdCardModule,
@@ -19,13 +18,11 @@ import {HomeComponent} from './home/home.component';
 import {SliderComponent} from './home/slider/slider.component';
 import {CardsComponent} from './home/cards-tab/cards-tab.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {CollapseModule} from 'ngx-bootstrap';
 import {RouterModule, Routes} from '@angular/router';
 import {NavComponent} from './nav/nav.component';
 import {AgmCoreModule} from 'angular2-google-maps/core';
 import {MapComponent} from './home/google-map/map.component';
 import {FooterComponent} from './footer/footer/footer.component';
-import {DropdownDirective} from './shared/dropdown.directive';
 import {OnamaComponent} from './onama/onama.component';
 import {LokacijeComponent} from './lokacije/lokacije.component';
 import {GalerijaComponent} from './galerija/galerija.component';
@@ -54,7 +51,6 @@ const appRoutes: Routes = [
 		NavComponent,
 		MapComponent,
 		FooterComponent,
-		DropdownDirective,
 		OnamaComponent,
 		LokacijeComponent,
 		GalerijaComponent,
@@ -72,7 +68,6 @@ const appRoutes: Routes = [
 		RouterModule.forRoot(appRoutes),
 		MdTabsModule,
 		MdTableModule,
-		CdkTableModule,
 		MdInputModule,
 		MdToolbarModule,
 		MdIconModule,
@@ -80,7 +75,6 @@ const appRoutes: Routes = [
 		AgmCoreModule.forRoot({
 			apiKey: 'AIzaSyB7Z_4PjI8sZydVhET0DN17ScH20NiWdsk',
 		}),
-		CollapseModule,
 		MdButtonModule,
 		MdCardModule
 	],
@@ -91,5 +85,4 @@ const appRoutes: Routes = [
 		AppComponent
 	]
 })
-export class AppModule {
-}
+export class AppModule {}

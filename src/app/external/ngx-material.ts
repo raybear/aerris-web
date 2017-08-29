@@ -9,5 +9,4 @@ import {MdCardModule} from '@angular/material';
 		MdCardModule
 	]
 })
-export class NgxMaterialModule {
-}
+export class NgxMaterialModule {}

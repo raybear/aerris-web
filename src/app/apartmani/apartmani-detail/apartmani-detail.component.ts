@@ -16,8 +16,7 @@ export class ApartmaniDetailComponent implements OnInit {
 	id: number;
 	apartment: Apartman;
 
-	constructor(private route: ActivatedRoute) {
-	}
+	constructor(private route: ActivatedRoute) {}
 
 	ngOnInit() {
 

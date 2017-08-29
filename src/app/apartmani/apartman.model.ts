@@ -21,6 +21,5 @@ export type ApartmanPosition = 'Sever / Istok' | 'Sever / Zapad' | 'Jug / Zapad'
 export class Image {
 
 	constructor(public image: string,
-				public title?: string) {
-	}
+				public title?: string) {}
 }

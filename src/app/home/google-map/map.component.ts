@@ -27,7 +27,8 @@ export class MapComponent {
 			draggable: false
 		}
 	];
-	// google maps zoom level
+
+	// Google maps zoom level
 	zoom = 16;
 
 	// initial center position for the map
@@ -41,7 +42,6 @@ export class MapComponent {
 	markerDragEnd(m: Marker, $event: MouseEvent) {
 		console.log('dragEnd', m, $event);
 	}
-
 }
 
 // just an interface for type safety.

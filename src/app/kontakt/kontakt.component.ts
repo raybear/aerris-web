@@ -9,8 +9,7 @@ import {AppService, IMessage} from '../app.service';
 export class KontaktComponent implements OnInit {
 	message: IMessage = {};
 
-	constructor(private appService: AppService) {
-	}
+	constructor(private appService: AppService) {}
 
 	sendEmail(message: IMessage) {
 		this.appService.sendEmail(message).subscribe(res => {
@@ -20,7 +19,5 @@ export class KontaktComponent implements OnInit {
 		});
 	};
 
-	ngOnInit() {
-	}
-
+	ngOnInit() {}
 }
