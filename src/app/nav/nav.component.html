@@ -1,0 +1,56 @@
+<header class="navbar navbar-light navbar-fixed-top navbar-expand-lg">
+
+	<a class="navbar-brand" [routerLink]="['/']" (click)="navbarCollapsed = false"><img src="{{logo}}"> </a>
+
+	<button class="navbar-toggler navbar-toggler-right" type="button" (click)=" navbarCollapsed = !navbarCollapsed "
+			[attr.aria-expanded]="!navbarCollapsed" aria-controls="navbarContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="navbar-collapse" [ngbCollapse]="!navbarCollapsed" id="navbarContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item" appDropdown [routerLinkActive]="['active']"
+				[routerLinkActiveOptions]="{ exact: true }">
+				<a class="nav-link" role="button" [routerLink]="['/']" (click)="navbarCollapsed = true">Naslovna</a>
+			</li>
+			<li class="nav-item" appDropdown [routerLinkActive]="['active']">
+				<a class=" nav-link" href="#" role="button" [routerLink]="['/onama']" (click)="navbarCollapsed = true">O
+					Nama<span class="caret" style="width: 50px"></span> </a>
+			</li>
+			<li class="nav-item d-inline-block" ngbDropdown #myDrop="ngbDropdown" [routerLinkActive]="['active']">
+				<a class="nav-link" role="button" ngbDropdownToggle routerLink="['']"
+				   (click)="navbarCollapsed = true">Projekti <i class="fa fa-caret-down" aria-hidden="true"></i>
+				</a>
+				<div ngbDropdownMenu aria-labelledby="dropdownManual">
+					<button class="dropdown-item " [routerLink]="['/apartmani']"><i class="fa fa-home"
+																					aria-hidden="true"></i><span>Apartmani</span>
+					</button>
+					<button class="dropdown-item"><i class="fa fa-wrench" aria-hidden="true"></i>
+						<span>Tehnologija</span></button>
+					<button class="dropdown-item"><i class="fa fa-book" aria-hidden="true"></i>
+						<span>Plan Izrade</span></button>
+					<button class="dropdown-item"><i class="fa fa-usd" aria-hidden="true"></i>
+						<span>Investitori</span></button>
+				</div>
+			</li>
+			<li class="nav-item " ngbDropdown [routerLinkActive]="['active']">
+				<a class="nav-link" [routerLink]="['/lokacija']"
+				   (click)="navbarCollapsed = true">Lokacija
+				</a>
+
+			</li>
+			<li class="nav-item" [routerLinkActive]="['active']">
+				<a class="nav-link" [routerLink]="['/galerija']" (click)="navbarCollapsed = true">Galerija</a>
+			</li>
+			<li class="nav-item" [routerLinkActive]="['active']">
+				<a class="nav-link" [routerLink]="['/kontakt']" (click)="navbarCollapsed = true">Kontakt</a>
+			</li>
+			<li class="nav-item d-lg-none" *ngFor="let component of components" [routerLinkActive]="['active']">
+				<a class="nav-link" [routerLink]="['/components', component.toLowerCase()]"
+				   (click)="navbarCollapsed = true">{{ component }}</a>
+			</li>
+		</ul>
+	</div>
+</header>
+
